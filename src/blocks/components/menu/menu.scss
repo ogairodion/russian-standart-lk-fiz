@@ -1,0 +1,64 @@
+.menu {
+    overflow-y: auto;
+    height: calc(100vh - 96px);
+    @media screen and (max-width: 1299px) {
+        overflow-y: visible;
+    }
+    @media screen and (max-width: 991px) {
+        display: flex;
+        flex-direction: column;
+    }
+    &__item {
+        @media screen and (max-width: 991px) {
+            order: 2;
+        }
+        &-content {
+            display: flex;
+            align-items: center;
+            padding: 26px 32px;
+            background: #fff;
+            border-bottom: 1px solid #eaedf3;
+
+            @media screen and (max-width: 991px) {
+                padding: 20px;
+            }
+        }
+
+        &-icon {
+            font-size: 28px;
+            line-height: 1;
+            margin-right: 24px;
+
+            @media screen and (max-width: 991px) {
+                font-size: 24px;
+            }
+        }
+
+        &-text {
+            font-size: 15px;
+            line-height: 19px;
+            font-weight: 600;
+
+            @media screen and (max-width: 991px) {
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+
+        &.active {
+            .menu {
+                &__item {
+                    &-icon {
+                        svg {
+                            fill: $red;
+                        }
+                    }
+
+                    &-text {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}

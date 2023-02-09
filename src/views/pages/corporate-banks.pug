@@ -1,0 +1,18 @@
+extends ../layouts/default
+include ../helpers/_mixins
+
+block variables
+  - const title = "Банки, МФО и КПК"
+
+block content
+      include ../../blocks/modules/loader/loader.pug
+      include ../../blocks/modules/header/header.pug
+      main.main
+        include ../../blocks/modules/sidebar/sidebar.pug
+        .content
+          include ../../blocks/modules/corporate-banks/corporate-banks.pug
+          include ../../blocks/modules/footer/footer.pug
+
+block scripts
+  script(defer src="./js/vendor.js")
+  script(defer src="./js/main.js")

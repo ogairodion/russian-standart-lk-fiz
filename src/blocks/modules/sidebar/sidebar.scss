@@ -1,0 +1,101 @@
+.sidebar {
+    position: relative;
+    z-index: z('menu');
+    width: 304px;
+    min-width: 304px;
+    min-height: 100vh;
+    height: calc(100vh - 96px);
+    overflow: hidden;
+    background: #fff;
+    border-right: 1px solid #eaedf3;
+    @media screen and (max-width: 1299px) {
+        @include tr('all');
+        position: fixed;
+        top: 75px;
+        left: 0;
+        min-height: calc(100vh - 75px);
+        transform: translateX(-200%);
+        overflow-y: auto;
+    }
+    @media screen and (max-width: 699px) {
+        top: 63px;
+        width: 100%;
+        min-height: calc(100vh - 63px);
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        background: #EAEDF3;
+        padding: 15px 32px;
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 100%;
+            border: 1px solid #D0D0D0;
+            padding: 4px;
+            transform: rotate(180deg);
+            margin-right: 16px;
+
+            &.close {
+                transform: rotate(0);
+            }
+        }
+
+        &-text {
+            font-size: 15px;
+            line-height: 19px;
+        }
+    }
+
+    &.active {
+        .sidebar {
+            &__top {
+                &-icon {
+                    background: #fff;
+                }
+            }
+        }
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 11px 16px;
+        border-bottom: 1px solid #D0D0D0;
+    }
+
+    &__icon {
+        font-size: 26px;
+        line-height: 1;
+
+        svg {
+            fill: $red;
+        }
+    }
+
+    &-edit {
+        .sidebar {
+            &__icons {
+                justify-content: flex-start;
+            }
+            &__icon {
+                margin-right: 16px;
+
+                &:last-child {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.menu--open {
+    .sidebar {
+        transform: translateX(0);
+    }
+}

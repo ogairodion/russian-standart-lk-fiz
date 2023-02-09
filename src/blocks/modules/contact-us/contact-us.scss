@@ -1,0 +1,249 @@
+.contact-us {
+    .form {
+        background: #fff;
+        border: 1px solid #ECF2FF;
+        border-radius: 8px;
+        padding: 26px 30px;
+        margin-bottom: 32px;
+
+        @media screen and (max-width: 991px) {
+            padding: 16px;
+        }
+
+        &__title {
+            font-size: 24px;
+            line-height: 26px;
+            font-weight: 700;
+            border-bottom: 1px solid #EAEDF3;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+
+            @media screen and (max-width: 991px) {
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+        }
+
+        label {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+
+            @media screen and (max-width: 991px) {
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+
+        &__input {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+
+            input, textarea {
+                max-width: 100%;
+                margin-left: 0;
+            }
+
+            textarea {
+                min-height: 199px;
+                padding-left: 24px;
+
+                @media screen and (max-width: 799px) {
+                    font-size: 14px;
+                    min-height: 100px;
+                    padding-left: 16px;
+                }
+            }
+        }
+
+        .select {
+            width: 100%;
+        }
+    }
+
+    &__history {
+        &-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #EAEDF3;
+            padding-bottom: 16px;
+            margin-bottom: 32px;
+
+            @media screen and (max-width: 991px) {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 16px;
+            }
+        }
+
+        &-title {
+            font-size: 24px;
+            line-height: 26px;
+            font-weight: 700;
+
+            @media screen and (max-width: 991px) {
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &-item {
+            border-radius: 8px;
+            background: #fff;
+            padding: 8px 24px 24px 24px;
+            margin-bottom: 24px;
+
+            &:last-child {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    .sort {
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: 799px) {
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        &-title {
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 700;
+            margin-right: 8px;
+
+            @media screen and (max-width: 799px) {
+                width: 100%;
+                font-size: 14px;
+                line-height: 20px;
+                margin-right: 0;
+                margin-bottom: 8px;
+            }
+        }
+
+        &-item {
+            @include tr('all');
+            font-size: 16px;
+            line-height: 26px;
+            color: #919497;
+            cursor: pointer;
+            margin-right: 8px;
+
+            @media screen and (max-width: 799px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            &:hover {
+                color: $green;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.active {
+                text-decoration: underline;
+                color: $green;
+            }
+        }
+    }
+
+    .history {
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        &__title {
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 700;
+
+            @media screen and (max-width: 799px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+
+        &__date {
+            font-size: 14px;
+            line-height: 26px;
+            color: #919497;
+
+            @media screen and (max-width: 799px) {
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+
+        &__question {
+            font-size: 16px;
+            line-height: 26px;
+            color: #919497;
+            background: #ECF2FF;
+            border-radius: 8px;
+            padding: 16px 24px;
+            margin-bottom: 16px;
+
+            @media screen and (max-width: 799px) {
+                font-size: 14px;
+                line-height: 20px;
+                padding: 16px;
+                margin-bottom: 8px;
+            }
+        }
+
+        &__answer {
+            display: flex;
+            align-items: flex-start;
+            padding-left: 52px;
+
+            @media screen and (max-width: 799px) {
+                padding-left: 16px;
+            }
+
+            &-logo {
+                font-size: 43px;
+                line-height: 1;
+                margin-right: 16px;
+
+                @media screen and (max-width: 799px) {
+                    font-size: 36px;
+                    margin-right: 8px;
+                }
+            }
+
+            &-title {
+                font-size: 14px;
+                line-height: 26px;
+                font-weight: 700;
+                color: $red;
+                border-bottom: 1px solid #ECF2FF;
+                padding-bottom: 4px;
+                margin-bottom: 10px;
+
+                @media screen and (max-width: 799px) {
+                    line-height: 20px;
+                }
+            }
+
+            &-text {
+                font-size: 16px;
+                line-height: 26px;
+
+                @media screen and (max-width: 799px) {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}

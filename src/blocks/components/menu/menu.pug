@@ -1,0 +1,8 @@
+include menu-data.pug
+.menu
+    each menu_item in menu
+        a.menu__item(class=menu_item.class href=menu_item.href) 
+            .menu__item-content
+                .menu__item-icon
+                    +svgMono(menu_item.iсon)
+                .menu__item-text= menu_item.text

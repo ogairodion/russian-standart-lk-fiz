@@ -1,0 +1,15 @@
+extends ../layouts/default
+include ../helpers/_mixins
+
+block variables
+  - const title = "Ошибка 404"
+
+block content
+      include ../../blocks/modules/loader/loader.pug
+      include ../../blocks/modules/header/header-auth.pug
+      main.main
+        include ../../blocks/modules/404/404.pug
+
+block scripts
+  script(defer src="./js/vendor.js")
+  script(defer src="./js/main.js")

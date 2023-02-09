@@ -1,0 +1,55 @@
+include report-data.pug
+section.report 
+    .l-default
+        h1.section__title.title.title--h1 Кредитный отчет
+        .section__content
+            .section__items
+                .section__subtitle.section__subtitle 
+                    strong Кредитный отчет - это основной источник информации кредитных организаций для принятия решений о выдаче займа.
+                .section__text.section__text 
+                    p В нем содержится информация, входящую в состав кредитной истории ее владельца - физического лица. В частности, кредитный отчет содержит сведения о принятых на себя заемщиком обязательствах по договорам займа, кредитной дисциплине, запросах информации кредитной истории со стороны финансовых организаций и других пользователей. Предоставляется по запросу субъекта кредитной истории в соответствии с федеральным законом № 218-ФЗ «О Кредитных историях».
+                    p С октября 2019 года кредитный отчет предоставляется в обновленной форме, которую мы специально доработали, чтобы читать отчет стало удобнее и проще.
+                    p Важно! Кредитная история физического лица как правило хранится в разных БКИ, при этом ее содержание в разных бюро может отличаться. Узнать список бюро, в которых содержится кредитная история субъекта, поможет услуга "Запрос в ЦККИ"
+                .swiper-container.section__table-slider.table-slider
+                    .swiper-wrapper
+                        table.section__table.table.swiper-slide
+                            thead 
+                                tr 
+                                    td Дата создания
+                                    td Рейтинг
+                                    td Задолженость
+                                    td Просрочки
+                                    td Запросы
+                            tbody 
+                                each report_item in report_items
+                                    tr 
+                                        td 
+                                            .free Бесплатно
+                                            .table-td
+                                                .date= report_item.date
+                                                .time= report_item.time
+                                        td
+                                            .table-td
+                                                .status(class=report_item.class)= report_item.word
+                                        td= report_item.dept
+                                        td= report_item.delays
+                                        td
+                                            .table-td
+                                                .query= report_item.query
+                                                .icons
+                                                    .icon
+                                                        +svgMono('upload')
+                                                    .icon
+                                                        +svgMono('visible')
+            .section__sidebar
+                .section__get
+                    a.section__get-btn.btn(disabled href="") Получить отчет
+                    .section__get-message Нет информации
+                    a.section__get-btn.btn(href="") Скачать пример
+                .section__message
+                    .section__message-img
+                        +webp(['1'], 'jpg', 'lazy')
+                    .section__message-content
+                        .section__message-title Сервис оповещений
+                        .section__message-text Всем пользователям, ранее не подключавшим оповещения, Сервис оповещений доступен бесплатно в течение 1-го месяца. Для активации предложения выберите бесплатный пробный период подписки – 1 месяц.
+                        a.section__message-btn.btn.btn--green(href="") Перейти 

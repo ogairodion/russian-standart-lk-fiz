@@ -1,0 +1,12 @@
+include questions-data.pug
+section.questions 
+    .l-default
+        h1.section__title.title.title--h1 Вопросы и ответы
+        .questions__items 
+            each question in questions
+                .questions__item.dropdown
+                    .questions__item-top.dropdown-top 
+                        .questions__item-arrow.dropdown-arrow 
+                            +svgMono('arrow')
+                        .questions__item-title.dropdown-title= question.title 
+                    .questions__item-body.dropdown-content!= question.text 

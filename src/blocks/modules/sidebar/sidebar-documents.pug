@@ -1,0 +1,12 @@
+sidebar.sidebar
+    .sidebar__top
+        .sidebar__top-icon
+            +svgMono('arrow-dropdown')
+        .sidebar__top-text Загрузки
+    .sidebar__icons
+        a.sidebar__icon(href="")
+            +svgMono('add-doc')
+        a.sidebar__icon(href="")
+            +svgMono('print')
+    include ../.././components/menu/menu-documents.pug
+    

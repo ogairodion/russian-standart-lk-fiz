@@ -1,0 +1,48 @@
+include scoring-data.pug
+section.section 
+    .l-default
+        h1.section__title.title.title--h1 Кредитный скоринг
+        .section__content
+            .section__items
+                .section__subtitle.section__subtitle 
+                    strong СКОРИНГ - это простой и доступный способ оценки кредитоспособности глазами кредитных организаций!
+                .section__text.section__text 
+                    p Кредитное бюро Русский Стандарт представляет сервис «Кредитный скоринг». Сервис доступен пользователям, данные о кредитных обязательствах которых передавались в ООО «Кредитное бюро Русский Стандарт». Скоринг позволяет быстро оценить свои шансы на получение кредита без детального анализа кредитной истории, выбрать тип кредитной организации (банк, МФО/КПК), а также получить рекомендации по его улучшению.
+                .swiper-container.section__table-slider.table-slider
+                    .swiper-wrapper
+                        table.section__table.table.swiper-slide
+                            thead 
+                                tr 
+                                    td Дата создания отчета
+                                    td Скоринговый балл
+                                    td Значение скорингового балла
+                            tbody 
+                                each scoring_item in scoring_items
+                                    tr 
+                                        td 
+                                            .table-td
+                                                .date= scoring_item.date
+                                                .time= scoring_item.time
+                                        td
+                                            .table-td
+                                                .score= scoring_item.score
+                                        td
+                                            .table-td
+                                                .status(class=scoring_item.class)= scoring_item.word
+                                                .icons
+                                                    .icon
+                                                        +svgMono('upload')
+                                                    .icon
+                                                        +svgMono('visible')
+            .section__sidebar
+                .section__get
+                    a.section__get-btn.btn(disabled href="") Заказать скоринг
+                    .section__get-message Данная услуга неактивна
+                    a.section__get-btn.btn(href="") Скачать пример
+                .section__message
+                    .section__message-img
+                        +webp(['1'], 'jpg', 'lazy')
+                    .section__message-content
+                        .section__message-title Сервис оповещений
+                        .section__message-text Всем пользователям, ранее не подключавшим оповещения, Сервис оповещений доступен бесплатно в течение 1-го месяца. Для активации предложения выберите бесплатный пробный период подписки – 1 месяц.
+                        a.section__message-btn.btn.btn--green(href="") Перейти 

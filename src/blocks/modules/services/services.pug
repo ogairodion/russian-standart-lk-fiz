@@ -1,0 +1,39 @@
+include services-data.pug 
+section.services
+    .l-default
+        h1.services__title.title.title--h1 Все услуги бюро
+        .section__content
+            .services__items
+                each service in services
+                    .services__item
+                        a.services__item-question(href="")
+                            +svgMono('question')
+                            .message 
+                                span Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni quo qui id. Repudiandae pariatur sed, sint non quaerat minima culpa molestias tempora et quibusdam. Officiis tempora ad nemo illum asperiores.
+                        .services__item-top
+                            .services__item-icon
+                                +svgMono(service.icon)
+                            .services__item-title= service.title
+                        .services__item-bottom
+                            - if (service.price)
+                                .services__item-price= service.price
+                            - if (service.class == 'active')
+                                a.services__item-btn.btn.btn--green(href="") Выполнить
+                            - else
+                                a.services__item-btn.btn.btn--grey(href="" disabled="disabled") Услуга не активна
+            .section__sidebar
+                .section__status
+                    .section__status-top
+                        .section__status-title Ваш статус
+                    .section__status-bottom
+                        .section__status-info
+                            .section__status-icon
+                            .section__status-message Сервис недоступен
+                        .section__status-text Сервис недоступен для неиндентифицированного аккаунта
+                .section__message
+                    .section__message-img
+                        +webp(['1'], 'jpg', 'lazy')
+                    .section__message-content
+                        .section__message-title Сервис оповещений
+                        .section__message-text Всем пользователям, ранее не подключавшим оповещения, Сервис оповещений доступен бесплатно в течение 1-го месяца. Для активации предложения выберите бесплатный пробный период подписки – 1 месяц.
+                        a.section__message-btn.btn.btn--green(href="") Перейти 

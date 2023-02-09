@@ -1,0 +1,113 @@
+.personal {
+    &__table {
+        background: #EAEDF3;
+        border: 1px solid #ECF2FF;
+        border-radius: 8px;
+        padding: 26px 30px;
+        margin-bottom: 23px;
+        @media screen and (max-width: 799px) {
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        &-title {
+            font-size: 24px;
+            line-height: 26px;
+            margin-right: 10px;
+            @media screen and (max-width: 799px) {
+                font-size: 18px;
+                line-height: 20px;
+            }
+        }
+
+        &-top {
+            display: flex;
+            align-items: flex-start;
+            border-bottom: 1px solid #E5E5E5;
+            padding-bottom: 10px;
+            margin-bottom: 24px;
+
+            @media screen and (max-width: 991px) {
+                margin-bottom: 16px;
+            }
+        }
+
+        &-items {
+            display: flex;
+            align-items: center;
+            padding: 10px 16px;
+            margin-bottom: 16px;
+            @media screen and (max-width: 991px) {
+                padding: 8px;
+            }
+            &:nth-child(2n) {
+                background: rgba(255, 255, 255, 0.3);
+            }
+        }
+
+        &-item {
+            font-size: 16px;
+            line-height: 20px;
+            @media screen and (max-width: 799px) {
+                font-size: 14px;
+                line-height: 18px;
+            }
+            &:first-child {
+                width: 409px;
+            }
+        }
+    }
+
+    &__history {
+        &-title {
+            font-size: 24px;
+            line-height: 26px;
+            margin-right: 10px;
+
+            @media screen and (max-width: 991px) {
+                font-size: 18px;
+                line-height: 20px;
+            }
+        }
+
+        &-top {
+            display: flex;
+            align-items: flex-start;
+            border-bottom: 1px solid #E5E5E5;
+            padding-bottom: 10px;
+            margin-bottom: 24px;
+
+            @media screen and (max-width: 991px) {
+                margin-bottom: 16px;
+            }
+        }
+
+        &-subtitle {
+            font-size: 16px;
+            line-height: 26px;
+            color: #919497;
+            margin-bottom: 24px;
+
+            @media screen and (max-width: 767px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+
+        .select {
+            width: 100%;
+        }
+
+        .form {
+            &__input {
+                position: relative;
+                z-index: 2;
+                label {
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-weight: 600;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+}

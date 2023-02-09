@@ -1,0 +1,45 @@
+section.personal
+    .l-default 
+        h1.section__title.title.title--h1 Персональные данные
+        .personal__table
+            .personal__table-top
+                .personal__table-title Данные по умолчанию
+                a.personal__item-question(href="")
+                    +svgMono('question')
+            .personal__table-items
+                .personal__table-item <strong>Тема вопроса</strong>
+                .personal__table-item <strong>Иванов Иван Петрович</strong>
+            .personal__table-items
+                .personal__table-item <strong>Дата рождения</strong>
+                .personal__table-item 09.10.1991
+            .personal__table-items
+                .personal__table-item <strong>Серия паспорта</strong>
+                .personal__table-item 6011
+            .personal__table-items
+                .personal__table-item <strong>Номер паспорта</strong>
+                .personal__table-item 935456
+            .personal__table-items
+                .personal__table-item <strong>Дата выдачи паспорта</strong>
+                .personal__table-item 08.10.2011
+        .personal__history
+            .personal__history-top
+                .personal__history-title История сообщений:
+                a.personal__item-question(href="")
+                    +svgMono('question')
+            .personal__history-subtitle Выберите актуальные персональные данные, если они отличаются от установленных по умолчанию
+            form.personal__history-form.form
+                .form__input
+                    label Фамилия, Имя и Отчество
+                    select.select(name="type")  
+                        option(selected="selected") Иванов Иван Петрович
+                        option Иванов Иван Петрович
+                        option Иванов Иван Петрович
+                        option Иванов Иван Петрович
+                .form__input
+                    label Документ
+                    select.select(name="type")  
+                        option(selected="selected") 6011 935456 выдан 08.10.2011
+                        option 6011 935456 выдан 08.10.2011
+                        option 6011 935456 выдан 08.10.2011
+                        option 6011 935456 выдан 08.10.2011
+                button.form__submit.btn.btn--green(type="submit") Сохранить изменения

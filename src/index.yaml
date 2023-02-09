@@ -1,0 +1,35 @@
+ProjectTitle: ProjectName
+
+PageList:
+  - file: homepage.html
+    ready: 100
+  - file: scoring.html
+    ready: 100
+  - file: report.html
+    ready: 100
+  - file: report-2.html
+    ready: 100
+  - file: report-consolidated.html
+    ready: 100
+  - file: ckki.html
+    ready: 100
+  - file: reports-agents.html
+    ready: 100
+  - file: alerts.html
+    ready: 100
+  - file: alerts-tabs.html
+    ready: 100
+  - file: questions.html
+    ready: 100
+  - file: contact-us.html
+    ready: 100
+  - file: history-pay.html
+    ready: 100
+  - file: personal.html
+    ready: 100
+  - file: corporate.html
+    ready: 100
+  - file: corporate-banks.html
+    ready: 100
+  - file: 404.html
+    ready: 100
